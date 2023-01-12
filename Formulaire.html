@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>CEVV Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/jquery-3.3.1.slim.min.js"></script>
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    .header {
+        max-width: 600px;
+        margin: 50px auto;
+        text-align: center;
+      }
+      
+      .header__title {
+        margin-bottom: 30px;
+        font-size: 2.1rem;
+      }
+      
+      .content {
+        width: 95%;
+        margin: 0 auto 50px;
+      }
+      
+      .content__title {
+        margin-bottom: 40px;
+        font-size: 20px;
+        text-align: center;
+      }
+      
+      .content__title--m-sm {
+        margin-bottom: 10px;
+      }
+      
+      .multisteps-form__progress {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+      }
+      
+      .multisteps-form__progress-btn {
+        transition-property: all;
+        transition-duration: 0.15s;
+        transition-timing-function: linear;
+        transition-delay: 0s;
+        position: relative;
+        padding-top: 20px;
+        color: rgba(108, 117, 125, 0.7);
+        text-indent: -9999px;
+        border: none;
+        background-color: transparent;
+        outline: none !important;
+        cursor: pointer;
+      }
+      @media (min-width: 500px) {
+        .multisteps-form__progress-btn {
+          text-indent: 0;
+        }
+      }
+      .multisteps-form__progress-btn:before {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        display: block;
+        width: 13px;
+        height: 13px;
+        content: '';
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+        transition: all 0.15s linear 0s, -webkit-transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
+        transition: all 0.15s linear 0s, transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
+        transition: all 0.15s linear 0s, transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s, -webkit-transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
+        border: 2px solid currentColor;
+        border-radius: 50%;
+        background-color: #fff;
+        box-sizing: border-box;
+        z-index: 3;
+      }
+      .multisteps-form__progress-btn:after {
+        position: absolute;
+        top: 5px;
+        left: calc(-50% - 13px / 2);
+        transition-property: all;
+        transition-duration: 0.15s;
+        transition-timing-function: linear;
+        transition-delay: 0s;
+        display: block;
+        width: 100%;
+        height: 2px;
+        content: '';
+        background-color: currentColor;
+        z-index: 1;
+      }
+      .multisteps-form__progress-btn:first-child:after {
+        display: none;
+      }
+      .multisteps-form__progress-btn.js-active {
+        color: #007bff;
+      }
+      .multisteps-form__progress-btn.js-active:before {
+        -webkit-transform: translateX(-50%) scale(1.2);
+                transform: translateX(-50%) scale(1.2);
+        background-color: currentColor;
+      }
+      
+      .multisteps-form__form {
+        position: relative;
+      }
+      
+      .multisteps-form__panel {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+      }
+      .multisteps-form__panel.js-active {
+        height: auto;
+        opacity: 1;
+        visibility: visible;
+      }
+      .multisteps-form__panel[data-animation="scaleOut"] {
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+      }
+      .multisteps-form__panel[data-animation="scaleOut"].js-active {
+        transition-property: all;
+        transition-duration: 0.2s;
+        transition-timing-function: linear;
+        transition-delay: 0s;
+        -webkit-transform: scale(1);
+                transform: scale(1);
+      }
+      .multisteps-form__panel[data-animation="slideHorz"] {
+        left: 50px;
+      }
+      .multisteps-form__panel[data-animation="slideHorz"].js-active {
+        transition-property: all;
+        transition-duration: 0.25s;
+        transition-timing-function: cubic-bezier(0.2, 1.13, 0.38, 1.43);
+        transition-delay: 0s;
+        left: 0;
+      }
+      .multisteps-form__panel[data-animation="slideVert"] {
+        top: 30px;
+      }
+      .multisteps-form__panel[data-animation="slideVert"].js-active {
+        transition-property: all;
+        transition-duration: 0.2s;
+        transition-timing-function: linear;
+        transition-delay: 0s;
+        top: 0;
+      }
+      .multisteps-form__panel[data-animation="fadeIn"].js-active {
+        transition-property: all;
+        transition-duration: 0.3s;
+        transition-timing-function: linear;
+        transition-delay: 0s;
+      }
+      .multisteps-form__panel[data-animation="scaleIn"] {
+        -webkit-transform: scale(0.9);
+                transform: scale(0.9);
+      }
+      .multisteps-form__panel[data-animation="scaleIn"].js-active {
+        transition-property: all;
+        transition-duration: 0.2s;
+        transition-timing-function: linear;
+        transition-delay: 0s;
+        -webkit-transform: scale(1);
+                transform: scale(1);
+      }
+      
+
+
+
+  </style>
+
+  <!-- =======================================================
+  * Template Name: Groovin - v4.7.1
+  * Template URL: https://bootstrapmade.com/groovin-free-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <!-- Uncomment below if you prefer to use ian image logo -->
+      <a href="index.html" class="logo"><img src="assets/img/logo/cevv1.png" alt="" class="img-fluid"></a>
+
+      <!-- .navbar -->
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li class="dropdown"><a href="#"><span>Accueil </span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="index.html">CEVV</a></li>
+              <li><a href="#">Extensions</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="evenement.html">EVENEMENT</a></li>
+        
+          <li><a class="nav-link scrollto" href="Communication.html">Communication</a></li>
+          <li class="dropdown"><a href="#"><span>PREDICATION </span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="predications-cevv.html">CEVV</a></li>
+              <li><a href="predications-jpc.html">JPC</a></li>
+              <li><a href="predications-ecodim.html">Ecodim</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto " href="don-page.html">FAIRE UN DON</a></li>
+          <li><a class="nav-link scrollto" href="contact.html">CONTACT</a></li>
+        
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+      <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+          <!-- Slide 1 -->
+          <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-1.jpg);">
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown">Contacter Le Departement de Loren ipsum  ...</h2>
+                 <div>
+                  <a href="#main" class="btn-get-started animate__animated animate__fadeInUp scrollto">Acceder</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    
+
+        </div>
+
+        
+
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <header class="header">
+        <h1 class="header__title">Contacter le Departement de loren ispun</h1>
+      </header>
+      <div class="content">
+        <div class="content__inner">
+          <div class="container">
+          
+            <h2 class="content__title">Pour tous contact: +24320930293,+243548954985</h2>
+            <h2 class="content__title">Cliquer sur  'Precedent'   ou  'Suivant' </h2>
+          </div>
+          <div class="container overflow-hidden">
+            <div class="multisteps-form">
+              <div class="row">
+                <div class="col-12 col-lg-8 ml-auto mr-auto mb-4">
+                  <div class="multisteps-form__progress">
+                    <button class="multisteps-form__progress-btn js-active" type="button" title="User Info">Informations Du contact</button>
+                    <button class="multisteps-form__progress-btn" type="button" title="Address">Address</button>
+                    
+                    <button class="multisteps-form__progress-btn" type="button" title="Message">Message        </button>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-lg-8 m-auto">
+                  <form class="multisteps-form__form">
+                    <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
+                      <h3 class="multisteps-form__title">Informations Du contact</h3>
+                      <div class="multisteps-form__content">
+                        <div class="form-row mt-4">
+                          <div class="col-12 col-sm-6">
+                            <input class="multisteps-form__input form-control" type="text" placeholder="Nom"/>
+                          </div>
+                          <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                            <input class="multisteps-form__input form-control" type="text" placeholder="Prenom"/>
+                          </div>
+                        </div>
+                        <div class="form-row mt-4">
+                          <div class="col-12 col-sm-6">
+                            <input class="multisteps-form__input form-control" type="text" placeholder="Numero de Telephone"/>
+                          </div>
+                          <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                            <input class="multisteps-form__input form-control" type="email" placeholder="Email"/>
+                          </div>
+                        </div>
+                        <div class="form-row mt-4">
+                          
+                        </div>
+                        <div class="button-row d-flex mt-4">
+                          <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Suivant</button>
+                        </div>
+                      </div>
+                    </div>
+      
+                    <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                      <h3 class="multisteps-form__title">Your Address</h3>
+                      <div class="multisteps-form__content">
+                        <div class="form-row mt-4">
+                          <div class="col">
+                            <input class="multisteps-form__input form-control" type="text" placeholder="Address "/>
+                          </div>
+                        </div>
+                        
+                        <div class="button-row d-flex mt-4">
+                          <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Precedent</button>
+                          <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Suivant</button>
+                        </div>
+                      </div>
+                    </div>
+      
+                    
+      
+                    <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                      <h3 class="multisteps-form__title">Additional Message</h3>
+                      <div class="multisteps-form__content">
+                        <div class="form-row mt-4">
+                          <textarea class="multisteps-form__textarea form-control" placeholder="Additional Message and Questions"></textarea>
+                        </div>
+                        <div class="button-row d-flex mt-4">
+                          <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Precedent</button>
+                          <button class="btn btn-success ml-auto" type="button" title="Send">Envoyer</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </main><!-- End #main -->
+
+   <!-- ======= Footer ======= -->
+   <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>CEVV</h3>
+              <p>
+                N°3 MANIEMA <br>
+                Lubumbashi, RDC<br><br>
+                <strong>Telephone:</strong> +243 999 9999<br>
+                <strong>Email:</strong> infos@cevv.church<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="https://twitter.com/Cevvchurch?s=20&t=Z9BX7BIr3CrXq16MHDIikQ" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="https://web.facebook.com/CEVV.CHURCH/?ref=page_internal" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="https://www.youtube.com/channel/UC2TgORUZKo3Zx-QiHEsmfPw/featured" class="google-plus"><i class="bx bxl-youtube"></i></a>
+                <a href="https://www.tiktok.com/@cevvchurch?is_from_webapp=1&sender_device=pc" class="linkedin"><i class="bx bxl-tiktok"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Liens utiles</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Acceuille</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Extension</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Contact</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Faire un don</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Evenement</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Abonnez vous</h4>
+            <p>Entrez votre mail afin de vous abonner</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="S'abonner">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>CEVV</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/groovin-free-bootstrap-theme/ -->
+        Designé par <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+    <script>
+
+        const DOMstrings = {
+            stepsBtnClass: 'multisteps-form__progress-btn',
+            stepsBtns: document.querySelectorAll(`.multisteps-form__progress-btn`),
+            stepsBar: document.querySelector('.multisteps-form__progress'),
+            stepsForm: document.querySelector('.multisteps-form__form'),
+            stepsFormTextareas: document.querySelectorAll('.multisteps-form__textarea'),
+            stepFormPanelClass: 'multisteps-form__panel',
+            stepFormPanels: document.querySelectorAll('.multisteps-form__panel'),
+            stepPrevBtnClass: 'js-btn-prev',
+            stepNextBtnClass: 'js-btn-next' };
+          
+          
+          const removeClasses = (elemSet, className) => {
+          
+            elemSet.forEach(elem => {
+          
+              elem.classList.remove(className);
+          
+            });
+          
+          };
+          
+          const findParent = (elem, parentClass) => {
+          
+            let currentNode = elem;
+          
+            while (!currentNode.classList.contains(parentClass)) {
+              currentNode = currentNode.parentNode;
+            }
+          
+            return currentNode;
+          
+          };
+          
+          const getActiveStep = elem => {
+            return Array.from(DOMstrings.stepsBtns).indexOf(elem);
+          };
+          
+          const setActiveStep = activeStepNum => {
+          
+            removeClasses(DOMstrings.stepsBtns, 'js-active');
+          
+            DOMstrings.stepsBtns.forEach((elem, index) => {
+          
+              if (index <= activeStepNum) {
+                elem.classList.add('js-active');
+              }
+          
+            });
+          };
+          
+          const getActivePanel = () => {
+          
+            let activePanel;
+          
+            DOMstrings.stepFormPanels.forEach(elem => {
+          
+              if (elem.classList.contains('js-active')) {
+          
+                activePanel = elem;
+          
+              }
+          
+            });
+          
+            return activePanel;
+          
+          };
+          
+          const setActivePanel = activePanelNum => {
+          
+            removeClasses(DOMstrings.stepFormPanels, 'js-active');
+          
+            DOMstrings.stepFormPanels.forEach((elem, index) => {
+              if (index === activePanelNum) {
+          
+                elem.classList.add('js-active');
+          
+                setFormHeight(elem);
+          
+              }
+            });
+          
+          };
+          
+          const formHeight = activePanel => {
+          
+            const activePanelHeight = activePanel.offsetHeight;
+          
+            DOMstrings.stepsForm.style.height = `${activePanelHeight}px`;
+          
+          };
+          
+          const setFormHeight = () => {
+            const activePanel = getActivePanel();
+          
+            formHeight(activePanel);
+          };
+          
+          DOMstrings.stepsBar.addEventListener('click', e => {
+          
+            const eventTarget = e.target;
+          
+            if (!eventTarget.classList.contains(`${DOMstrings.stepsBtnClass}`)) {
+              return;
+            }
+          
+            const activeStep = getActiveStep(eventTarget);
+          
+            setActiveStep(activeStep);
+          
+            setActivePanel(activeStep);
+          });
+          
+          DOMstrings.stepsForm.addEventListener('click', e => {
+          
+            const eventTarget = e.target;
+          
+            if (!(eventTarget.classList.contains(`${DOMstrings.stepPrevBtnClass}`) || eventTarget.classList.contains(`${DOMstrings.stepNextBtnClass}`)))
+            {
+              return;
+            }
+          
+            const activePanel = findParent(eventTarget, `${DOMstrings.stepFormPanelClass}`);
+          
+            let activePanelNum = Array.from(DOMstrings.stepFormPanels).indexOf(activePanel);
+          
+            if (eventTarget.classList.contains(`${DOMstrings.stepPrevBtnClass}`)) {
+              activePanelNum--;
+          
+            } else {
+          
+              activePanelNum++;
+          
+            }
+          
+            setActiveStep(activePanelNum);
+            setActivePanel(activePanelNum);
+          
+          });
+          
+          window.addEventListener('load', setFormHeight, false);
+          
+          window.addEventListener('resize', setFormHeight, false);
+          
+          
+          const setAnimationType = newType => {
+            DOMstrings.stepFormPanels.forEach(elem => {
+              elem.dataset.animation = newType;
+            });
+          };
+          
+          //changing animation
+          const animationSelect = document.querySelector('.pick-animation__select');
+          
+          animationSelect.addEventListener('change', () => {
+            const newAnimationType = animationSelect.value;
+          
+            setAnimationType(newAnimationType);
+          });
+          
+    </script>
+
+</body>
+
+</html>
